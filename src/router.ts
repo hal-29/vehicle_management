@@ -3,7 +3,7 @@ import { createCar, getCar } from "./controller"
 
 const carRouter = express.Router()
 
-carRouter.post("/car", createCar)
-carRouter.get("/car", getCar)
+carRouter.post("/", createCar)
+carRouter.get("/", getCar)
 
 export default carRouter
