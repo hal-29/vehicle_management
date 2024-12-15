@@ -1,13 +1,13 @@
-import { PlusCircle } from "lucide-react"
-import { Link, NavLink } from "react-router"
-import { Button } from "./ui/button"
+import { PlusCircle } from "lucide-react";
+import { Link, NavLink } from "react-router";
+import { Button } from "./ui/button";
 
 function Navbar() {
   const setClassName = ({ isActive }: { isActive: boolean }) => {
     return isActive
-      ? "inline-flex transition-all text-sm justify-center items-center bg-slate-600 hover:bg-slate-700 px-4 rounded-full h-8 text-accent text-white capitalize"
-      : "inline-flex transition-all text-sm justify-center items-center bg-slate-100 hover:bg-slate-200 px-4 rounded-full h-8 text-accent-foreground capitalize"
-  }
+      ? "inline-flex transition-all justify-center items-center bg-slate-600 hover:bg-slate-700 px-4 rounded-full h-10 text-accent text-white capitalize"
+      : "inline-flex transition-all justify-center items-center bg-slate-100 hover:bg-slate-200 px-4 rounded-full h-10 text-accent-foreground capitalize";
+  };
 
   return (
     <nav className="bg-white p-2 rounded-lg">
@@ -23,7 +23,7 @@ function Navbar() {
           </NavLink>
         </li>
         <Link className="ml-auto" to="/upload">
-          <Button className="rounded-full h-8 text-sm">
+          <Button className="rounded-full h-10">
             <span>Upload</span>
             <span>
               <PlusCircle size={24} />
@@ -32,6 +32,6 @@ function Navbar() {
         </Link>
       </ul>
     </nav>
-  )
+  );
 }
-export default Navbar
+export default Navbar;
